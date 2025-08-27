@@ -6,6 +6,9 @@
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#0b0d10" />
   <title>Constantine Markou — Portfolio</title>
+  <link rel="icon" href="media/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="media/logo.png" />
+  <link rel="icon" sizes="512x512" href="media/logo.png" />
   <meta name="description" content="The portfolio of Constantine Markou: Artwork, Filmmaking, Games design, Photography, Creative Writing." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +16,22 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    
   <div class="wrap">
+
     <header>
+    
       <div class="brand" aria-label="Site branding">
-        <div class="brand__name">Constantine Markou</div>
+        
+        <div class="brand__name">Constantine</div>
+        <div class="brand__secondname">Markou</div>
         <div class="brand__tag">Portfolio</div>
+        
       </div>
+      
 
     </header>
-
+    
     <main class="tiles" aria-label="Portfolio categories">
       <!--Placeholders for now-->
       <a class="tile artwork" href="#" title="Artwork" aria-label="Artwork">
@@ -71,6 +81,16 @@
       <a class="tile writing" href="#" title="Creative Writing" aria-label="Creative Writing">
         <div class="tile__label">
           <span>Creative Writing</span>
+          <span class="arrow" aria-hidden>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18L18 6M18 6H9M18 6V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+      <a class="tile about" href="#" title="About Me" aria-label="About Me">
+        <div class="tile__label">
+          <span>About Me</span>
           <span class="arrow" aria-hidden>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 18L18 6M18 6H9M18 6V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>

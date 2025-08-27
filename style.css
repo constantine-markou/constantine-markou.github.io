@@ -40,7 +40,7 @@
 
     /* Grid */
     .tiles{
-      display:grid; gap: clamp(12px, 1.4vw, 18px);
+      display:grid; gap: clamp(5px, 1.4vw, 5px);
       grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: 11rem;
     }

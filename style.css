@@ -1,10 +1,10 @@
    :root{
-      --bg:#0b0d10;         /* deep graphite */
-      --panel:#0f1318;      /* tile base */
-      --text:#e5e7eb;       /* soft white */
-      --muted:#9aa0a6;      /* muted gray */
-      --accent:#7c3aed;     /* royal violet */
-      --radius:22px;        /* rounded-octagon look */
+      --bg:#0b0d10;         
+      --panel:#0f1318;      
+      --text:#e5e7eb;       
+      --muted:#9aa0a6;      
+      --accent:#7c3aed;     
+      --radius:22px;        
       --shadow: 0 10px 30px rgba(0,0,0,.55), 0 2px 10px rgba(0,0,0,.35);
     }
 

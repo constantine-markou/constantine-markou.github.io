@@ -298,8 +298,8 @@
 
 .piece__media img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   object-fit: cover;
   object-position: center;
   transition: transform .6s ease, filter .6s ease;

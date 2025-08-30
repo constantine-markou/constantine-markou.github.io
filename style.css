@@ -275,6 +275,8 @@
 
 /* Main image takes full width */
 .piece__media {
+  width: 60%;
+  height: 60%;
   grid-column: 1 / -1;
   background: var(--panel);
   border-radius: 16px;

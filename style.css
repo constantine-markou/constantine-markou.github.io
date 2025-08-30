@@ -268,6 +268,7 @@
 
 /* Image gallery grid */
 .piece__gallery {
+  
   display: grid;
   gap: clamp(12px, 1.5vw, 18px);
   grid-template-columns: 1fr;
@@ -275,8 +276,7 @@
 
 /* Main image takes full width */
 .piece__media {
-  width: 60%;
-  height: 60%;
+  
   grid-column: 1 / -1;
   background: var(--panel);
   border-radius: 16px;
@@ -284,6 +284,11 @@
   box-shadow: 0 8px 25px rgba(0,0,0,.4);
   position: relative;
 
+}
+
+#acetyl-fear .piece__gallery{
+  width: 50%;
+  height: 50%;
 }
 
 /* Custom aspect ratios for specific pieces */

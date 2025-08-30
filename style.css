@@ -219,6 +219,11 @@
   --buy-the-ticket-main-ratio: 3/4; 
 
 }
+
+#the-creation {
+  --the-creation-main-ratio: 10/8; 
+
+}
 /* Individual artwork piece container */
 .piece {
   background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
@@ -282,10 +287,13 @@
 /* Custom aspect ratios for specific pieces */
 #acetyl-fear .piece__media {
   aspect-ratio: var(--acetyl-fear-main-ratio, 3/4);
-}
 
+}
 #buy-the-ticket .piece__media {
   aspect-ratio: var(--buy-the-ticket-main-ratio, 3/4);
+}
+#the-creation .piece__media {
+  aspect-ratio: var(--buy-the-ticket-main-ratio, 10/8);
 }
 
 .piece__media img {

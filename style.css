@@ -209,6 +209,12 @@
   gap: clamp(24px, 3vw, 40px);
 }
 
+/* CSS Custom Properties for piece-specific dimensions */
+#acetyl-fear {
+  --acetyl-fear-main-ratio: 5/4; 
+  --acetyl-fear-detail-ratio: 4/3; 
+}
+
 /* Individual artwork piece container */
 .piece {
   background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
@@ -266,7 +272,16 @@
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0,0,0,.4);
   position: relative;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/10; /* Default fallback */
+}
+
+/* Custom aspect ratios for specific pieces */
+#acetyl-fear .piece__media {
+  aspect-ratio: var(--acetyl-fear-main-ratio, 16/10);
+}
+
+#acetyl-fear .piece__detail {
+  aspect-ratio: var(--acetyl-fear-detail-ratio, 4/3);
 }
 
 .piece__media img {
@@ -296,7 +311,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,.25);
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/3; /* Default fallback */
   position: relative;
 }
 

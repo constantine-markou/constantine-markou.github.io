@@ -272,12 +272,12 @@
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0,0,0,.4);
   position: relative;
-  aspect-ratio: 16/10; /* Default fallback */
+
 }
 
 /* Custom aspect ratios for specific pieces */
 #acetyl-fear .piece__media {
-  aspect-ratio: var(--acetyl-fear-main-ratio, 16/10);
+  aspect-ratio: var(--acetyl-fear-main-ratio, 3/4);
 }
 
 #acetyl-fear .piece__detail {

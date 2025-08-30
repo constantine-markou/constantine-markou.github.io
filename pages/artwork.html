@@ -5,35 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#0b0d10" />
-  <title>Constantine Markou — Portfolio</title>
-  <link rel="icon" href="media/general/logo.png" type="image/png" />
-  <link rel="apple-touch-icon" href="media/general/logo.png" />
-  <link rel="icon" sizes="512x512" href="media/general/logo.png" />
-  <meta name="description" content="The portfolio of Constantine Markou: Artwork, Filmmaking, Games design, Photography, Creative Writing." />
+  <title>Artwork — Acetyl Fear | Constantine Markou</title>
+  <link rel="icon" href="/media/general/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/media/general/logo.png" />
+  <link rel="icon" sizes="512x512" href="/media/general/logo.png" />
+  <meta name="description" content="Artwork showcase: Acetyl Fear by Constantine Markou." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
 </head>
-<body>   
-    
+<body>
   <div class="wrap">
-
     <header>
-    
       <div class="brand" aria-label="Site branding">
-        
         <div class="brand__name">Constantine Markou</div>
-
         <div class="brand__tag">Portfolio</div>
-        
       </div>
-
       <nav class="nav" aria-label="Primary">
-        
         <ul class="nav__list">
-          <li><a class="nav__link" href="#" title="Home">Home</a></li>      
-          <li><a class="nav__link" href="pages/artwork.html" title="Artwork">Artwork🎨</a></li>
+          <li><a class="nav__link" href="/index.html" title="Home">Home</a></li>
+          <li><a class="nav__link" href="#" title="Artwork">Artwork🎨</a></li>
           <li><a class="nav__link" href="#" title="Filmmaking">Filmmaking🎥</a></li>
           <li><a class="nav__link" href="#" title="Game design">Game Design🕹</a></li>
           <li><a class="nav__link" href="#" title="Photography">Photography📷</a></li>
@@ -41,14 +33,54 @@
           <li><a class="nav__link" href="#" title="About me">About me🧬</a></li>
         </ul>
       </nav>
-    
     </header>
+
+    <main class="artwork" aria-label="Artwork showcase">
+      <article class="piece" id="acetyl-fear">
+        <header class="piece__header">
+          <h1 class="piece__title">Acetyl Fear</h1>
+          <p class="piece__subtitle">Single-piece showcase</p>
+        </header>
+
+        <figure class="piece__media">
+          <img src="/media/artwork/Acetyl%20Fear/MAIN.JPG" alt="Acetyl Fear — main artwork by Constantine Markou" loading="eager" />
+          <figcaption class="sr-only">Main view</figcaption>
+        </figure>
+
+        <figure class="piece__detail">
+          <img src="/media/artwork/Acetyl%20Fear/CLOSE.JPG" alt="Acetyl Fear — close-up detail" loading="lazy" />
+          <figcaption class="sr-only">Close-up detail</figcaption>
+        </figure>
+
+        <section class="piece__desc" aria-labelledby="desc-title">
+          <h2 id="desc-title">Description</h2>
+          <p class="muted">Boilerplate — replace with your notes. Suggested structure below.</p>
+          <dl class="facts">
+            <div class="facts__row"><dt>Year</dt><dd>2025</dd></div>
+            <div class="facts__row"><dt>Medium</dt><dd>—</dd></div>
+            <div class="facts__row"><dt>Dimensions</dt><dd>—</dd></div>
+            <div class="facts__row"><dt>Materials</dt><dd>—</dd></div>
+          </dl>
+          <div class="copy">
+            <p><strong>Overview:</strong> One or two sentences describing the piece, its intent, and where it sits in your body of work.</p>
+            <p><strong>Process:</strong> Notes on technique, iterations, or constraints worth mentioning.</p>
+            <p><strong>Themes:</strong> Optional comments on symbolism, references, or narrative.</p>
+          </div>
+        </section>
+      </article>
+    </main>
+
     <footer>
-      
-      <p>© 2025 </span>Constantine Markou</p>
+      <p>© 2025 Constantine Markou</p>
     </footer>
   </div>
 
-  
+  <!-- Optional tiny zoom: click any image to open it full in a new tab -->
+  <script>
+    document.querySelectorAll('.piece__media img, .piece__detail img').forEach(img => {
+      img.addEventListener('click', () => window.open(img.src, '_blank', 'noopener'));
+      img.style.cursor = 'zoom-in';
+    });
+  </script>
 </body>
 </html>

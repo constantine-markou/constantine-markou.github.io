@@ -196,9 +196,101 @@
       outline-offset: 2px;
     }
 
-    /* make header wrap on small screens */
+
     @media (max-width: 699px){
       header{ flex-wrap: wrap; gap: 10px; }
       .nav{ width: 100%; }
       .nav__list{ justify-content: space-between; }
     }
+/* ===== Artwork page ===== */
+.artwork { margin-top: 10px; }
+.piece{
+  display:grid;
+  gap: clamp(12px, 1.6vw, 20px);
+  grid-template-columns: 1fr;
+  align-items:start;
+}
+
+.piece__header{
+  margin-bottom: 2px;
+}
+.piece__title{
+  font-size: clamp(20px, 3.2vw, 34px);
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+.piece__subtitle{
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.piece__media,
+.piece__detail{
+  background: var(--panel);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.piece__media img,
+.piece__detail img{
+  display:block;
+  width:100%;
+  height:auto;
+  transition: transform .6s ease, filter .6s ease;
+  filter: saturate(.98) contrast(1.02) brightness(.98);
+}
+.piece__media:hover img,
+.piece__detail:hover img{
+  transform: scale(1.02);
+  filter: saturate(1) contrast(1.05) brightness(1);
+}
+
+/* Description card */
+.piece__desc{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  border: 1px solid rgba(124,58,237,.22);
+  border-radius: 16px;
+  padding: clamp(14px, 2vw, 22px);
+  box-shadow: var(--shadow);
+}
+.piece__desc h2{ margin: 0 0 .4rem 0; }
+.piece__desc .muted{ color: var(--muted); }
+
+.facts{
+  margin: .6rem 0 1rem;
+  display:grid;
+  gap:.35rem;
+}
+.facts__row{
+  display:flex; gap:.6rem;
+}
+.facts__row dt{
+  min-width: 6.5rem;
+  color: var(--muted);
+}
+.facts__row dd{
+  margin:0;
+}
+
+/* Wide layout */
+@media (min-width: 900px){
+  .piece{
+    grid-template-columns: 1.7fr 1fr;
+    grid-template-areas:
+      \"media desc\"
+      \"detail desc\";
+  }
+  .piece__media{ grid-area: media; }
+  .piece__detail{ grid-area: detail; }
+  .piece__desc{
+    grid-area: desc;
+    position: sticky;
+    top: clamp(12px, 2vw, 24px);
+  }
+}
+
+/* Visually hidden utility */
+.sr-only{
+  position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}

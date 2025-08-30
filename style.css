@@ -212,7 +212,7 @@
 /* CSS Custom Properties for piece-specific dimensions */
 #acetyl-fear {
   --acetyl-fear-main-ratio: 3/4; 
-  --acetyl-fear-detail-ratio: 4/3; 
+
 }
 
 /* Individual artwork piece container */
@@ -280,8 +280,8 @@
   aspect-ratio: var(--acetyl-fear-main-ratio, 3/4);
 }
 
-#acetyl-fear .piece__detail {
-  aspect-ratio: var(--acetyl-fear-detail-ratio, 4/3);
+#buy-the-ticket .piece__media {
+  aspect-ratio: var(--buy-the-ticket-main-ratio, 3/4);
 }
 
 .piece__media img {
@@ -311,7 +311,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,.25);
-  aspect-ratio: 4/3; /* Default fallback */
+  aspect-ratio: 4/3;
   position: relative;
 }
 

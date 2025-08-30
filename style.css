@@ -215,6 +215,10 @@
 
 }
 
+#buy-the-ticket {
+  --buy-the-ticket-main-ratio: 3/4; 
+
+}
 /* Individual artwork piece container */
 .piece {
   background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));

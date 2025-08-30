@@ -224,6 +224,8 @@
   --the-creation-main-ratio: 10/8; 
 
 }
+
+
 /* Individual artwork piece container */
 .piece {
   background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
@@ -287,9 +289,16 @@
 }
 
 #acetyl-fear .piece__gallery{
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
 }
+
+#buy-the-ticket .piece__gallery{
+  width: 80%;
+  height: 80%;
+}
+
+
 
 /* Custom aspect ratios for specific pieces */
 #acetyl-fear .piece__media {
@@ -300,7 +309,11 @@
   aspect-ratio: var(--buy-the-ticket-main-ratio, 3/4);
 }
 #the-creation .piece__media {
-  aspect-ratio: var(--buy-the-ticket-main-ratio, 10/8);
+  aspect-ratio: var(--buy-the-ticket-main-ratio, 20/12);
+}
+
+#sisyphus .piece__media {
+  aspect-ratio: var(--sisyphus-main-ratio, 10/7);
 }
 
 .piece__media img {
@@ -350,6 +363,8 @@
 }
 
 /* Description section */
+
+
 .piece__desc {
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
   border: 1px solid rgba(124,58,237,.2);

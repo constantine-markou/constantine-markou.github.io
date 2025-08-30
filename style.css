@@ -294,3 +294,47 @@
 .sr-only{
   position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
 }
+
+
+#acetyl-fear .piece__media  { --img: url('media/artwork/Acetyl%20Fear/MAIN.JPG'); }
+#acetyl-fear .piece__detail { --img: url('media/artwork/Acetyl%20Fear/CLOSE.JPG'); }
+
+/* 2) Make the figures render background images via ::before */
+.piece__media,
+.piece__detail{
+  position: relative;
+  background: var(--panel);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Keep the intended aspect ratios */
+.piece__media  { aspect-ratio: 4 / 5; } /* portrait */
+.piece__detail { aspect-ratio: 4 / 3; } /* landscape */
+
+.piece__media::before,
+.piece__detail::before{
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(.98) contrast(1.02) brightness(.98);
+  transition: transform .6s ease, filter .6s ease;
+}
+
+.piece__media:hover::before,
+.piece__detail:hover::before{
+  transform: scale(1.02);
+  filter: saturate(1) contrast(1.05) brightness(1);
+}
+
+/* 3) Hide the <img> tags (they're just fallback now) */
+.piece__media img,
+.piece__detail img{
+  position: absolute;
+  width: 0; height: 0;
+  opacity: 0;
+  pointer-events: none;
+}

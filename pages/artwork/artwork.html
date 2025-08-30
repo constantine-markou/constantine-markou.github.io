@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#0b0d10" />
-  <title>Artwork — Acetyl Fear | Constantine Markou</title>
+  <title>Artwork — Constantine Markou</title>
   <link rel="icon" href="/media/general/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/media/general/logo.png" />
   <link rel="icon" sizes="512x512" href="/media/general/logo.png" />
-  <meta name="description" content="Artwork showcase: Acetyl Fear by Constantine Markou." />
+  <meta name="description" content="Artwork showcase by Constantine Markou." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -36,38 +36,108 @@
     </header>
 
     <main class="artwork" aria-label="Artwork showcase">
+      
+      <!-- First Artwork Piece -->
       <article class="piece" id="acetyl-fear">
         <header class="piece__header">
           <h1 class="piece__title">Acetyl Fear</h1>
-          <p class="piece__subtitle">Single-piece showcase</p>
+          <p class="piece__subtitle">Mixed Media Composition</p>
         </header>
 
-        <figure class="piece__media">
-          <img src="Acetyl Fear/MAIN.jpg" alt="Acetyl Fear — main artwork by Constantine Markou" loading="eager" width="20%" />
-          <figcaption class="sr-only">Main view</figcaption>
-        </figure>
+        <div class="piece__gallery">
+          <figure class="piece__media">
+            <img src="Acetyl Fear/MAIN.jpg" alt="Acetyl Fear — main artwork by Constantine Markou" loading="eager" />
+            <figcaption class="sr-only">Main view of Acetyl Fear</figcaption>
+          </figure>
 
-        <figure class="piece__detail">
-          <img src="Acetyl Fear/CLOSE.jpg" alt="Acetyl Fear — close-up detail" loading="lazy" width = "20%" />
-          <figcaption class="sr-only">Close-up detail</figcaption>
-        </figure>
+          <div class="piece__details">
+            <figure class="piece__detail">
+              <img src="Acetyl Fear/CLOSE.jpg" alt="Acetyl Fear — close-up detail showing texture and technique" loading="lazy" />
+              <figcaption class="sr-only">Close-up detail view</figcaption>
+            </figure>
+            <!-- Add more detail images as needed -->
+          </div>
+        </div>
 
-        <section class="piece__desc" aria-labelledby="desc-title">
-          <h2 id="desc-title">Description</h2>
-          <p class="muted">Boilerplate — replace with your notes. Suggested structure below.</p>
+        <section class="piece__desc" aria-labelledby="acetyl-fear-desc">
+          <h2 id="acetyl-fear-desc">About This Piece</h2>
+          <span class="muted">Replace with your artwork description and details.</span>
+          
           <dl class="facts">
-            <div class="facts__row"><dt>Year</dt><dd>2025</dd></div>
-            <div class="facts__row"><dt>Medium</dt><dd>—</dd></div>
-            <div class="facts__row"><dt>Dimensions</dt><dd>—</dd></div>
-            <div class="facts__row"><dt>Materials</dt><dd>—</dd></div>
+            <div class="facts__row">
+              <dt>Year</dt>
+              <dd>2025</dd>
+            </div>
+            <div class="facts__row">
+              <dt>Medium</dt>
+              <dd>—</dd>
+            </div>
+            <div class="facts__row">
+              <dt>Dimensions</dt>
+              <dd>—</dd>
+            </div>
+            <div class="facts__row">
+              <dt>Materials</dt>
+              <dd>—</dd>
+            </div>
           </dl>
+          
           <div class="copy">
             <p><strong>Overview:</strong> One or two sentences describing the piece, its intent, and where it sits in your body of work.</p>
             <p><strong>Process:</strong> Notes on technique, iterations, or constraints worth mentioning.</p>
-            <p><strong>Themes:</strong> Optional comments on symbolism, references, or narrative.</p>
+            <p><strong>Themes:</strong> Optional comments on symbolism, references, or narrative elements explored in this work.</p>
           </div>
         </section>
       </article>
+
+      <!-- Example of how to add more pieces -->
+      <!--
+      <article class="piece" id="next-artwork">
+        <header class="piece__header">
+          <h1 class="piece__title">Next Artwork Title</h1>
+          <p class="piece__subtitle">Artwork Type/Medium</p>
+        </header>
+
+        <div class="piece__gallery">
+          <figure class="piece__media">
+            <img src="path/to/main-image.jpg" alt="Description of main artwork" loading="lazy" />
+            <figcaption class="sr-only">Main view</figcaption>
+          </figure>
+
+          <div class="piece__details">
+            <figure class="piece__detail">
+              <img src="path/to/detail1.jpg" alt="Detail view 1" loading="lazy" />
+              <figcaption class="sr-only">Detail 1</figcaption>
+            </figure>
+            <figure class="piece__detail">
+              <img src="path/to/detail2.jpg" alt="Detail view 2" loading="lazy" />
+              <figcaption class="sr-only">Detail 2</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <section class="piece__desc" aria-labelledby="next-artwork-desc">
+          <h2 id="next-artwork-desc">About This Piece</h2>
+          <span class="muted">Description of this artwork.</span>
+          
+          <dl class="facts">
+            <div class="facts__row">
+              <dt>Year</dt>
+              <dd>2025</dd>
+            </div>
+            <div class="facts__row">
+              <dt>Medium</dt>
+              <dd>Digital/Traditional/etc</dd>
+            </div>
+          </dl>
+          
+          <div class="copy">
+            <p><strong>Overview:</strong> Description of this piece.</p>
+          </div>
+        </section>
+      </article>
+      -->
+
     </main>
 
     <footer>
@@ -75,6 +145,25 @@
     </footer>
   </div>
 
-  
+  <script>
+    // Simple image loading optimization
+    document.addEventListener('DOMContentLoaded', function() {
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.classList.add('loaded');
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      lazyImages.forEach(img => {
+        imageObserver.observe(img);
+      });
+    });
+  </script>
 </body>
 </html>

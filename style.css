@@ -137,6 +137,7 @@
       .games        { grid-column: span 4; grid-row: span 4; }
       .photography  { grid-column: span 2; grid-row: span 4; }
       .writing      { grid-column: span 4; grid-row: span 3; }
+      .music      { grid-column: span 4; grid-row: span 3; }
       .about      { grid-column: span 2; grid-row: span 3; }
     }
 
@@ -152,6 +153,7 @@
     .games       { --img: url('media/gamedesign/Gamedesign_Thumb.png'); }
     .photography { --img: url('media/photography/Photography_Thumb.png'); }
     .writing     { --img: url('media/writing/Writing_Thumb.png'); }
+    .music     { --img: url('media/music/MusicThumb.jpg'); }
     .about     { --img: url('media/about/About_Thumb.png'); }
 
     /* Footer mini note */
